@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>유저 정보</title>
+    <header th:replace="~{user/update :: userHead}"></header>
+    <style>
+        .table th, .table td {
+            text-align: center;
+            vertical-align: middle;
+        }
+        .table th {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h1 class="card-title text-center mb-4">회원 정보</h1>
+                        <table class="table table-bordered">
+                            <body>
+                                <tr>
+                                    <th>이름</th>
+                                    <td>[[${user.uname}]]</td>
+                                </tr>
+                                <tr>
+                                    <th>이메일</th>
+                                    <td>[[${user.email}]]</td>
+                                </tr>
+                                <tr>
+                                    <th>가입일자</th>
+                                    <td>[[${user.regDate}]]</td>
+                                </tr>
+                                <tr>
+                                    <th>지역</th>
+                                    <td>[[${user.location}]]</td>
+                                </tr>
+                                <tr>
+                                    <th>전화번호</th>
+                                    <td>[[${user.tel}]]</td>
+                                </tr>
+                            </body>
+                        </table>
+                    </div>    
+                </div>    
+            <div class="col-3"></div>    
+            </div>
+        </div>
+    </div>
+</body>
+</html>
